@@ -1,4 +1,4 @@
-package com.example.android.instantappsample
+package com.example.android.instantappsample.base
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

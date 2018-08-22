@@ -1,18 +1,18 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.example.android.instantappsample.app"
+        applicationId "com.example.android.potatoinc.instantappsample.app"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode rootProject.versionCode
         versionName rootProject.versionName
     }
-
-    flavorDimensions "default"
 
     buildTypes {
         debug
@@ -27,5 +27,4 @@ android {
 dependencies {
     implementation project(':character-details')
     implementation project(':character-list')
-    implementation project(':base')
 }

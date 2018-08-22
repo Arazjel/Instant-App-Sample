@@ -1,4 +1,4 @@
-package com.example.android.instantappsample.data
+package com.example.android.instantappsample.base.data
 
 data class Origin(
         val name: String,

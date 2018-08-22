@@ -1,4 +1,14 @@
 apply plugin: 'com.android.instantapp'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {}
+
+
+}
 
 dependencies {
     implementation project(':character-details')

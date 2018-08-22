@@ -3,9 +3,20 @@
     package="com.example.android.instantappsample.character_list">
 
     <application>
-        <activity android:name=".CharacterListActivity">
-            <intent-filter android:order="1"
-                android:autoVerify="true">
+
+        <activity
+            android:name=".CharacterListActivity"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter
+                android:autoVerify="true"
+                android:order="2">
+
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -15,6 +26,16 @@
                     android:host="android.example.com"
                     android:pathPattern="/character"
                     android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter
+                android:autoVerify="true"
+                android:order="2">
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
 
                 <data
                     android:host="android.example.com"
@@ -22,12 +43,13 @@
                     android:scheme="http" />
 
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <meta-data
+                android:name="default-url"
+                android:value="https://android.example.com/character" />
+
         </activity>
+
     </application>
 
 </manifest>
