@@ -1,4 +1,4 @@
-package com.example.android.character_details
+package com.example.android.instantappsample.character_details
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel

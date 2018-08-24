@@ -12,7 +12,7 @@ import timber.log.Timber
 
 public class CharacterListActivity : AppCompatActivity() {
 
-    private val viewModel: CharacterListViewModel by lazy { ViewModelProviders.of(this)[CharacterListViewModel::class.java] }
+    private val viewModel: CharacterListViewModel by lazy { ViewModelProviders.of(this@CharacterListActivity)[CharacterListViewModel::class.java] }
     private lateinit var characterListAdapter: CharacterItemAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +27,11 @@ public class CharacterListActivity : AppCompatActivity() {
         }
 
         characterListAdapter = CharacterItemAdapter {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("""https://android.example.com/character/${it.id}"""))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("""https://potatoinc.com/character/${it.id}"""))
             startActivity(intent)
         }
 
-        viewModel.pageData.observe(this, Observer {
+        viewModel.pageData.observe(this@CharacterListActivity, Observer {
             it?.results?.let(characterListAdapter.characterList::addAll)
             characterListAdapter.notifyDataSetChanged()
             characterListPb.visibility = View.GONE

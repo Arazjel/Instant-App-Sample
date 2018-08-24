@@ -1,4 +1,4 @@
-package com.example.android.character_details
+package com.example.android.instantappsample.character_details
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -39,7 +39,4 @@ class CharacterDetailsActivity : AppCompatActivity() {
 
     }
 
-    fun onCreate() {
-
-    }
 }

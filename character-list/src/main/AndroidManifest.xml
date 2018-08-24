@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="android.example.com"
+                    android:host="potatoinc.com"
                     android:pathPattern="/character"
                     android:scheme="https" />
             </intent-filter>
@@ -38,7 +38,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="android.example.com"
+                    android:host="potatoinc.com"
                     android:pathPattern="/character"
                     android:scheme="http" />
 

@@ -13,11 +13,14 @@ android {
         versionCode rootProject.versionCode
         versionName rootProject.versionName
     }
+
     buildTypes {
-        debug
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        debug {}
+        minified {
+            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 }
@@ -27,13 +30,15 @@ dependencies {
     feature project(':character-list')
     feature project(":character-details")
 
-
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api "com.android.support:appcompat-v7:$support_version"
     api 'com.android.support.constraint:constraint-layout:1.1.2'
+    api "com.android.support:recyclerview-v7:$support_version"
+
     api 'com.squareup.retrofit2:retrofit:2.4.0'
     api 'com.squareup.retrofit2:converter-gson:2.4.0'
     api 'com.google.code.gson:gson:2.8.5'
+
     api 'com.squareup.okhttp3:okhttp:3.11.0'
     api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     api 'com.squareup.okhttp3:logging-interceptor:3.9.1'
