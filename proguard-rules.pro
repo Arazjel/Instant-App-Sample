@@ -98,6 +98,9 @@
 -keep, includedescriptorclasses class com.example.android.instantappsample.base.RestClient {
     public protected *;
 }
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.UtilKt {
+    public protected *;
+}
 -keep, includedescriptorclasses class com.example.android.instantappsample.base.data.Character {
     public protected *;
 }

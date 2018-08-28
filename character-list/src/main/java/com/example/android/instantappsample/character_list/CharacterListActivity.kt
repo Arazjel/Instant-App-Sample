@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.example.android.instantappsample.base.getInstantAppCookie
 import com.google.android.gms.auth.api.credentials.*
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
@@ -86,6 +87,11 @@ public class CharacterListActivity : AppCompatActivity() {
                     }
 
                 }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.e(String(getInstantAppCookie(), Charset.defaultCharset()))
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

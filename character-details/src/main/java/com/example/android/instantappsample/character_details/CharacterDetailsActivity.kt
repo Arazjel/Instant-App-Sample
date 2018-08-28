@@ -2,12 +2,11 @@ package com.example.android.instantappsample.character_details
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
-import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.google.android.gms.instantapps.InstantApps
+import com.example.android.instantappsample.base.updateInstantAppCookie
 import kotlinx.android.synthetic.main.activity_character_details.*
 import timber.log.Timber
 import java.nio.charset.Charset
@@ -40,13 +39,7 @@ class CharacterDetailsActivity : AppCompatActivity() {
             }
         })
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            Timber.e("${packageManager.instantAppCookieMaxBytes}")
-            packageManager.updateInstantAppCookie(intent?.data.toString().toByteArray(Charset.defaultCharset()))
-        } else {
-            Timber.e("${InstantApps.getPackageManagerCompat(this).instantAppCookieMaxSize}")
-        }
-
+        updateInstantAppCookie(intent?.data.toString().toByteArray(Charset.defaultCharset()))
     }
 
 }
