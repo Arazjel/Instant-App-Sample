@@ -44,150 +44,141 @@
 -keep class android.arch.** { *; }
 -dontwarn android.arch.**
 
--keep, includedescriptorclasses class  android.arch.lifecycle.MutableLiveData {
+-keep, includedescriptorclasses class android.arch.lifecycle.MutableLiveData {
     public protected *;
 }
--keep, includedescriptorclasses class  android.arch.lifecycle.ViewModel {
+-keep, includedescriptorclasses class android.arch.lifecycle.ViewModel {
     public protected *;
 }
--keep, includedescriptorclasses class  android.arch.lifecycle.ViewModelProvider {
+-keep, includedescriptorclasses class android.arch.lifecycle.ViewModelProvider {
     public protected *;
 }
--keep, includedescriptorclasses class  android.arch.lifecycle.ViewModelProviders {
+-keep, includedescriptorclasses class android.arch.lifecycle.ViewModelProviders {
     public protected *;
 }
--keep, includedescriptorclasses class  android.content.Intent {
+-keep, includedescriptorclasses class android.support.constraint.ConstraintLayout {
     public protected *;
 }
--keep, includedescriptorclasses class  android.net.Uri {
+-keep, includedescriptorclasses class android.support.v4.app.FragmentActivity {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.constraint.ConstraintLayout {
+-keep, includedescriptorclasses class android.support.v4.content.ContextCompat {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.v4.app.FragmentActivity {
+-keep, includedescriptorclasses class android.support.v7.app.AppCompatActivity {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.v7.app.AppCompatActivity {
+-keep, includedescriptorclasses class android.support.v7.widget.RecyclerView {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.v7.widget.RecyclerView {
+-keep, includedescriptorclasses class android.support.v7.widget.RecyclerView$Adapter {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.v7.widget.RecyclerView$Adapter {
+-keep, includedescriptorclasses class android.support.v7.widget.RecyclerView$OnScrollListener {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.v7.widget.RecyclerView$OnScrollListener {
+-keep, includedescriptorclasses class android.support.v7.widget.RecyclerView$ViewHolder {
     public protected *;
 }
--keep, includedescriptorclasses class  android.support.v7.widget.RecyclerView$ViewHolder {
+-keep, includedescriptorclasses class com.bumptech.glide.Glide {
     public protected *;
 }
--keep, includedescriptorclasses class  android.view.LayoutInflater {
+-keep, includedescriptorclasses class com.bumptech.glide.RequestBuilder {
     public protected *;
 }
--keep, includedescriptorclasses class  android.view.View {
+-keep, includedescriptorclasses class com.bumptech.glide.RequestManager {
     public protected *;
 }
--keep, includedescriptorclasses class  android.view.ViewGroup {
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.ApiInterface {
     public protected *;
 }
--keep, includedescriptorclasses class  android.widget.ProgressBar {
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.MyObserver {
     public protected *;
 }
--keep, includedescriptorclasses class  android.widget.TextView {
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.RestClient {
     public protected *;
 }
--keep, includedescriptorclasses class  com.bumptech.glide.Glide {
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.data.Character {
     public protected *;
 }
--keep, includedescriptorclasses class  com.bumptech.glide.RequestBuilder {
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.data.CharacterPage {
     public protected *;
 }
--keep, includedescriptorclasses class  com.bumptech.glide.RequestManager {
+-keep, includedescriptorclasses class com.example.android.instantappsample.base.data.Info {
     public protected *;
 }
--keep, includedescriptorclasses class  com.example.android.instantappsample.base.ApiInterface {
+-keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.Credential {
     public protected *;
 }
--keep, includedescriptorclasses class  com.example.android.instantappsample.base.MyObserver {
+-keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Builder {
     public protected *;
 }
--keep, includedescriptorclasses class  com.example.android.instantappsample.base.RestClient {
+-keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.CredentialRequest$Builder {
     public protected *;
 }
--keep, includedescriptorclasses class  com.example.android.instantappsample.base.data.Character {
+-keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.Credentials {
     public protected *;
 }
--keep, includedescriptorclasses class  com.example.android.instantappsample.base.data.CharacterPage {
+-keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.CredentialsClient {
     public protected *;
 }
--keep, includedescriptorclasses class  com.example.android.instantappsample.base.data.Info {
+-keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.HintRequest$Builder {
     public protected *;
 }
--keep, includedescriptorclasses class  io.reactivex.Observable {
+-keep, includedescriptorclasses class com.google.android.gms.instantapps.InstantApps {
     public protected *;
 }
--keep, includedescriptorclasses class  io.reactivex.schedulers.Schedulers {
+-keep, includedescriptorclasses class com.google.android.gms.instantapps.PackageManagerCompat {
     public protected *;
 }
--keep, includedescriptorclasses class  java.lang.Integer {
+-keep, includedescriptorclasses class com.google.android.gms.tasks.Task {
     public protected *;
 }
--keep, includedescriptorclasses class  java.lang.Long {
+-keep,includedescriptorclasses class com.google.android.gms.tasks.OnCompleteListener {
+ public protected *;
+}
+-keep, includedescriptorclasses class io.reactivex.Observable {
     public protected *;
 }
--keep, includedescriptorclasses class  java.lang.Number {
+-keep, includedescriptorclasses class io.reactivex.schedulers.Schedulers {
     public protected *;
 }
--keep, includedescriptorclasses class  java.lang.Object {
+-keep, includedescriptorclasses class kotlin.Lazy {
     public protected *;
 }
--keep, includedescriptorclasses class  java.lang.StringBuilder {
+-keep, includedescriptorclasses class kotlin.LazyKt {
     public protected *;
 }
--keep, includedescriptorclasses class  java.util.ArrayList {
+-keep, includedescriptorclasses class kotlin.TypeCastException {
     public protected *;
 }
--keep, includedescriptorclasses class  java.util.HashMap {
+-keep, includedescriptorclasses class kotlin.Unit {
     public protected *;
 }
--keep, includedescriptorclasses class  java.util.List {
+-keep, includedescriptorclasses class kotlin.collections.CollectionsKt {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.Lazy {
+-keep, includedescriptorclasses class kotlin.jvm.functions.Function0 {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.LazyKt {
+-keep, includedescriptorclasses class kotlin.jvm.functions.Function1 {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.Unit {
+-keep, includedescriptorclasses class kotlin.jvm.internal.Intrinsics {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.collections.CollectionsKt {
+-keep, includedescriptorclasses class kotlin.jvm.internal.Lambda {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.jvm.functions.Function0 {
+-keep, includedescriptorclasses class kotlin.jvm.internal.PropertyReference1Impl {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.jvm.functions.Function1 {
+-keep, includedescriptorclasses class kotlin.jvm.internal.Reflection {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.jvm.internal.Intrinsics {
+-keep, includedescriptorclasses class timber.log.Timber {
     public protected *;
 }
--keep, includedescriptorclasses class  kotlin.jvm.internal.Lambda {
-    public protected *;
-}
--keep, includedescriptorclasses class  kotlin.jvm.internal.PropertyReference1Impl {
-    public protected *;
-}
--keep, includedescriptorclasses class  kotlin.jvm.internal.Reflection {
-    public protected *;
-}
--keep, includedescriptorclasses class  timber.log.Timber {
-    public protected *;
-}
--keep, includedescriptorclasses class  timber.log.Timber$DebugTree {
+-keep, includedescriptorclasses class timber.log.Timber$DebugTree {
     public protected *;
 }

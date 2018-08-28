@@ -1,5 +1,6 @@
 package com.example.android.instantappsample.character_list
 
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -40,11 +41,19 @@ class CharacterItemAdapter(
             itemCharacterContainerCrl.setOnClickListener {
                 onCharacterClicked(character)
             }
+            itemCharacterContainerCrl.setBackgroundColor(
+                    if (adapterPosition % 2 == 0) {
+                        ContextCompat.getColor(itemView.context, android.R.color.holo_blue_light)
+                    } else {
+                        ContextCompat.getColor(itemView.context, android.R.color.background_light)
+                    }
+            )
             Glide.with(itemView.context)
                     .load(character.image)
                     .into(itemCharacterIv)
 
             itemCharacterNameTv.text = character.name
+
         }
     }
 }

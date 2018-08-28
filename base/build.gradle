@@ -22,6 +22,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules.pro'
             signingConfig signingConfigs.debug
         }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules.pro'
+        }
+    }
+
+    splits {
+        generatePureSplits true
+        density {enable true }
     }
 }
 
@@ -52,4 +61,6 @@ dependencies {
     api "android.arch.lifecycle:extensions:1.1.1"
 
     api 'com.google.android.gms:play-services-instantapps:16.0.0'
+    api 'com.google.android.gms:play-services-auth:15.0.1'
+
 }
