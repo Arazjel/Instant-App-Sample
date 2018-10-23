@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
@@ -27,7 +28,7 @@ android {
 }
 
 dependencies {
-    implementation project(':character-details')
-    implementation project(':character-list')
+    implementation project(':details')
+    implementation project(':list')
     implementation project(':base')
 }

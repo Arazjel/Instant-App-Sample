@@ -4,9 +4,10 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.potatoinc.instantappsample.app"
+        applicationId "com.example.android.instantappsample.app"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode rootProject.versionCode
@@ -31,6 +32,7 @@ android {
 }
 
 dependencies {
-    implementation project(':character-details')
-    implementation project(':character-list')
+    implementation project(':base')
+    implementation project(':details')
+    implementation project(':list')
 }

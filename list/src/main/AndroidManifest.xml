@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.instantappsample.character_list">
+    package="com.example.android.instantappsample.characterlist">
 
     <application>
 
@@ -13,40 +13,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <intent-filter
-                android:autoVerify="true"
-                android:order="2">
-
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="potatoinc.com"
-                    android:pathPattern="/character"
-                    android:scheme="https" />
-            </intent-filter>
-
-            <intent-filter
-                android:autoVerify="true"
-                android:order="2">
-
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="potatoinc.com"
-                    android:pathPattern="/character"
-                    android:scheme="http" />
-
-            </intent-filter>
-
             <meta-data
                 android:name="default-url"
                 android:value="https://android.example.com/character" />
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="sample.com"
+                    android:pathPattern="/character"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="sample.com"
+                    android:pathPattern="/character"
+                    android:scheme="https" />
+            </intent-filter>
 
         </activity>
 

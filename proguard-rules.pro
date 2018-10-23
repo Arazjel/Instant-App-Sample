@@ -1,5 +1,10 @@
--keepattributes *Annotation*,Signature
-
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+-dontpreverify
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-keepattributes LineNumberTable,SourceFile,Signature,*Annotation*,Exceptions,InnerClasses
 -keepattributes SourceFile,LineNumberTable
 -keep public class * extends java.lang.Exception
 
@@ -7,6 +12,12 @@
 -keepclassmembers,allowshrinking,allowobfuscation interface * {
     @retrofit2.http.* <methods>;
 }
+
+-dontwarn android.support.**
+-dontwarn android.support.design.**
+-keep class android.support.design.** { *; }
+-keep interface android.support.design.** { *; }
+-keep public class android.support.design.R$* { *; }
 
 # Project
 -dontnote com.example.android.instantappsample.**
@@ -43,145 +54,3 @@
 -keepclassmembers class android.arch.** { *; }
 -keep class android.arch.** { *; }
 -dontwarn android.arch.**
-
--keep, includedescriptorclasses class android.arch.lifecycle.MutableLiveData {
-    public protected *;
-}
--keep, includedescriptorclasses class android.arch.lifecycle.ViewModel {
-    public protected *;
-}
--keep, includedescriptorclasses class android.arch.lifecycle.ViewModelProvider {
-    public protected *;
-}
--keep, includedescriptorclasses class android.arch.lifecycle.ViewModelProviders {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.constraint.ConstraintLayout {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v4.app.FragmentActivity {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v4.content.ContextCompat {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v7.app.AppCompatActivity {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v7.widget.RecyclerView {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v7.widget.RecyclerView$Adapter {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v7.widget.RecyclerView$OnScrollListener {
-    public protected *;
-}
--keep, includedescriptorclasses class android.support.v7.widget.RecyclerView$ViewHolder {
-    public protected *;
-}
--keep, includedescriptorclasses class com.bumptech.glide.Glide {
-    public protected *;
-}
--keep, includedescriptorclasses class com.bumptech.glide.RequestBuilder {
-    public protected *;
-}
--keep, includedescriptorclasses class com.bumptech.glide.RequestManager {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.ApiInterface {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.MyObserver {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.RestClient {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.UtilKt {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.data.Character {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.data.CharacterPage {
-    public protected *;
-}
--keep, includedescriptorclasses class com.example.android.instantappsample.base.data.Info {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.Credential {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.CredentialPickerConfig$Builder {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.CredentialRequest$Builder {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.Credentials {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.CredentialsClient {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.auth.api.credentials.HintRequest$Builder {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.instantapps.InstantApps {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.instantapps.PackageManagerCompat {
-    public protected *;
-}
--keep, includedescriptorclasses class com.google.android.gms.tasks.Task {
-    public protected *;
-}
--keep,includedescriptorclasses class com.google.android.gms.tasks.OnCompleteListener {
- public protected *;
-}
--keep, includedescriptorclasses class io.reactivex.Observable {
-    public protected *;
-}
--keep, includedescriptorclasses class io.reactivex.schedulers.Schedulers {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.Lazy {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.LazyKt {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.TypeCastException {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.Unit {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.collections.CollectionsKt {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.jvm.functions.Function0 {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.jvm.functions.Function1 {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.jvm.internal.Intrinsics {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.jvm.internal.Lambda {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.jvm.internal.PropertyReference1Impl {
-    public protected *;
-}
--keep, includedescriptorclasses class kotlin.jvm.internal.Reflection {
-    public protected *;
-}
--keep, includedescriptorclasses class timber.log.Timber {
-    public protected *;
-}
--keep, includedescriptorclasses class timber.log.Timber$DebugTree {
-    public protected *;
-}

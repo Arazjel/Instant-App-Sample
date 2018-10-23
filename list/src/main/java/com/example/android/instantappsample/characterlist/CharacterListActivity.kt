@@ -1,4 +1,4 @@
-package com.example.android.instantappsample.character_list
+package com.example.android.instantappsample.characterlist
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
